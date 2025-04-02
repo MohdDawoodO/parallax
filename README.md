@@ -29,7 +29,7 @@ Then add this code into your CSS file:
 Now add `data-parallax="speed"` to the element you want to use parallax
 the speed is a number in '%' value
 
-eg
+example:
 
 ```
 <div data-parallax="50">content<div>
