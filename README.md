@@ -1,38 +1,67 @@
-Add this code into your javascript or typescript file
+Only works in React (JSX/TSX) 😢
+
+Make a file called `useParallax.jsx` or `useParallax.tsx` paste this code into it:
 
 ```
-const abortController = new AbortController();
-const elements = document.querySelectorAll("[data-parallax]");
+export default function useParallax() {
+  const abortController = new AbortController();
+  const signal = abortController.signal;
 
-    window.addEventListener(
-      "scroll",
-      () => {
-        const y = window.scrollY;
+  const elements = document.querySelectorAll("[data-parallax]");
 
-        elements.forEach((element: any) => {
-          const speed = Number(element.getAttribute("data-parallax") / 100);
-          element.style.transform = `translateY(${-(y * speed)}px)`;
-        });
-      },
-      { signal: abortController.signal }
-    );
+  window.addEventListener(
+    "scroll",
+    () => {
+      const y = window.scrollY;
+
+      elements.forEach((element: any) => {
+        const speed = Number(element.getAttribute("data-parallax"))/100;
+        element.style.transform = `translateY(${-(y * speed)}px)`;
+      });
+    },
+    { signal }
+  );
+
+  return abortController;
+}
+
 ```
 
-Then add this code into your CSS file:
+Then, add this code to your global CSS file:
 
 ```
 [data-parallax] {
-  will-change: transform;
+will-change: transform;
 }
-```
-
-Now add `data-parallax="speed"` to the element you want to use parallax
-the speed is a number in '%' value
-
-eg
 
 ```
-<div data-parallax="50">content<div>
+
+Import the useParallax function into the component you want to use parallax effect and add this code:
+
+```
+useEffect(() => {
+    const controller = useParallax();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
 ```
 
-This project contain some examples, you can try out how it works 😃
+Finally, add `data-parallax="speed"` to the element where you want to adjust the speed,
+The speed should be a number, for example, '50' means 50%.
+
+Example:
+
+```
+<div data-parallax="50">content</div>
+
+```
+
+This project contains some examples, so you can try out how it works. 😃
+
+NOTE: Don't run the useParallax function in your root component, as it is always rendered.
+This will cause multiple scroll event listeners to be added, which can slow down the website.
+
+If you have an idea on how to fix this without using any libraries, feel free to fork the code. 😀

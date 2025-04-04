@@ -1,0 +1,36 @@
+.image-four-10 {
+  position: absolute;
+  z-index: 10;
+  bottom: 0%;
+}
+.image-four-9 {
+  z-index: 9;
+}
+.image-four-8 {
+  z-index: 8;
+}
+.image-four-7 {
+  z-index: 7;
+}
+.image-four-6 {
+  z-index: 6;
+}
+.image-four-5 {
+  z-index: 5;
+}
+.image-four-4 {
+  z-index: 4;
+}
+.image-four-3 {
+  z-index: 3;
+}
+.image-four-2 {
+  z-index: 2;
+}
+.image-four-1 {
+  z-index: 1;
+}
+
+.special-four {
+  background: #081e44;
+}

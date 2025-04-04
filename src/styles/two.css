@@ -1,0 +1,32 @@
+.image-three-1 {
+  z-index: 2;
+}
+.image-three-2 {
+  z-index: 4;
+}
+.image-three-3 {
+  z-index: 5;
+}
+.image-three-4 {
+  z-index: 6;
+}
+.image-three-5 {
+  z-index: 7;
+}
+.image-three-6 {
+  z-index: 8;
+}
+.image-three-7 {
+  z-index: 9;
+  bottom: -9%;
+}
+.image-three-8 {
+  z-index: 3;
+}
+.image-three-9 {
+  z-index: 1;
+}
+
+.special-three {
+  background: #001716;
+}

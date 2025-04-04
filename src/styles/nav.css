@@ -1,0 +1,26 @@
+nav {
+  position: fixed;
+  display: flex;
+  border-radius: 10rem;
+  bottom: 5%;
+  left: 50%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  gap: 0.25rem;
+  border: 2px solid white;
+  z-index: 1000;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+nav:hover {
+  padding: 0.5rem 1rem;
+}
+
+nav h1 {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  color: white;
+  padding-right: 0.25rem;
+}

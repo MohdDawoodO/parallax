@@ -1,4 +1,17 @@
-export default function Test() {
+import { useEffect } from "react";
+import "../styles/home.css";
+import useParallax from "./useParallax";
+
+export default function Home() {
+  useEffect(() => {
+    scrollTo(0, 0);
+    const controller = useParallax();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
   return (
     <main>
       <section data-parallax="-40" className="section one">
