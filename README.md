@@ -24,7 +24,6 @@ export default function useParallax() {
 
   return abortController;
 }
-
 ```
 
 Then, add this code to your global CSS file:
@@ -33,7 +32,6 @@ Then, add this code to your global CSS file:
 [data-parallax] {
 will-change: transform;
 }
-
 ```
 
 Import the useParallax function into the component you want to use parallax effect and add this code:
@@ -46,7 +44,6 @@ useEffect(() => {
       controller.abort();
     };
   }, []);
-
 ```
 
 Finally, add `data-parallax="speed"` to the element where you want to adjust the speed,
@@ -56,10 +53,10 @@ Example:
 
 ```
 <div data-parallax="50">content</div>
-
 ```
 
 This project contains some examples, so you can try out how it works. 😃
+If you want to see a quick demo, click this link: [useParallax demo](https://useparallax.vercel.app/)
 
 NOTE: Don't run the useParallax function in your root component, as it is always rendered.
 This will cause multiple scroll event listeners to be added, which can slow down the website.
