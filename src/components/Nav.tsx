@@ -1,10 +1,8 @@
-import { useState } from "react";
 import nextIcon from "../assets/next.svg";
 import "../styles/nav.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Nav() {
-  const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const paths = ["/", "/one", "/two", "/three"];
@@ -18,10 +16,12 @@ export default function Nav() {
   return (
     <nav
       onClick={nextExample}
-      onMouseOver={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      style={{
+        borderRadius: 1000,
+        border: "2px solid white",
+      }}
     >
-      {open && <h1>view next example</h1>}
+      <h1>next example</h1>
       <img src={nextIcon} />
     </nav>
   );

@@ -1,26 +1,43 @@
 nav {
   position: fixed;
   display: flex;
-  border-radius: 10rem;
+  align-items: center;
+  justify-content: center;
   bottom: 5%;
   left: 50%;
+  border-radius: 10rem;
+  border: 2px solid white;
+  transform: translateX(-50%);
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.25);
-  padding: 0.5rem;
-  gap: 0.25rem;
-  border: 2px solid white;
-  z-index: 1000;
-  transform: translateX(-50%);
-  cursor: pointer;
-}
-
-nav:hover {
   padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  z-index: 1000;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 nav h1 {
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 1.1rem;
   color: white;
-  padding-right: 0.25rem;
+  pointer-events: none;
+}
+@media screen and (max-width: 1360px) {
+  nav img {
+    scale: 0.85;
+  }
+}
+@media screen and (max-width: 1071px) {
+  nav img {
+    scale: 0.75;
+  }
+}
+@media screen and (max-width: 526px) {
+  nav img {
+    scale: 0.75;
+  }
+  nav h1 {
+    font-size: 1.2rem;
+  }
 }

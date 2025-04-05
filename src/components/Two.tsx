@@ -25,18 +25,16 @@ export default function Two() {
   return (
     <main>
       <section className="section">
-        <img data-parallax="100" className={`image image-three-7`} src={two7} />
-        ;
-        <img data-parallax="81" className={`image image-three-6`} src={two6} />;
-        <img data-parallax="68" className={`image image-three-5`} src={two5} />;
-        <img data-parallax="54" className={`image image-three-4`} src={two4} />;
-        <img data-parallax="41" className={`image image-three-3`} src={two3} />;
-        <img data-parallax="30" className={`image image-three-2`} src={two2} />;
-        <img data-parallax="13" className={`image image-three-1`} src={two1} />;
+        <img className={`image abs image-three-7`} src={two7} />
+        <img data-parallax="81" className={`image image-three-6`} src={two6} />
+        <img data-parallax="68" className={`image image-three-5`} src={two5} />
+        <img data-parallax="54" className={`image image-three-4`} src={two4} />
+        <img data-parallax="41" className={`image image-three-3`} src={two3} />
+        <img data-parallax="30" className={`image image-three-2`} src={two2} />
+        <img data-parallax="13" className={`image image-three-1`} src={two1} />
         <img data-parallax="5" className={`image image-three-8`} src={clouds} />
-        ;
-        <img className={`image image-three-9`} src={sun} />;
-        <img className={`image image-three-10`} src={twobg} />;
+        <img className={`image image-three-9`} src={sun} />
+        <img className={`image image-three-10`} src={twobg} />
       </section>
       <section className="special special-three">
         <h1>Content</h1>

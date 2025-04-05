@@ -61,7 +61,8 @@ Example:
 
 This project contains some examples, so you can try out how it works. 😃
 
-NOTE: Don't run the useParallax function in your root component, as it is always rendered.
-This will cause multiple scroll event listeners to be added, which can slow down the website.
+NOTE: Don't run the `useParallax` function in your root component, as it is always rendered.
+If you run this function in the root component, you will have to execute it everytime the pathname changes,
+which will cause multiple scroll event listeners to be added, slowing down the website.
 
 If you have an idea on how to fix this without using any libraries, feel free to fork the code. 😀

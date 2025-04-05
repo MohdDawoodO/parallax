@@ -25,15 +25,15 @@ export default function One() {
   return (
     <main>
       <section className="section">
-        <img data-parallax="50" className={`image image-two-1`} src={one1} />;
-        <img data-parallax="100" className={`image image-two-2`} src={one2} />;
-        <img data-parallax="80" className={`image image-two-3`} src={one3} />;
-        <img data-parallax="60" className={`image image-two-4`} src={one4} />;
-        <img data-parallax="40" className={`image image-two-5`} src={one5} />;
-        <img data-parallax="20" className={`image image-two-6`} src={one6} />;
-        <img data-parallax="5" className={`image image-two-7`} src={one7} />;
-        <img data-parallax="3" className={`image image-two-8`} src={one8} />;
-        <img data-parallax="1" className={`image image-two-9`} src={one9} />;
+        <img data-parallax="50" className={`image image-two-1`} src={one1} />
+        <img className={`image abs image-two-2`} src={one2} />
+        <img data-parallax="80" className={`image image-two-3`} src={one3} />
+        <img data-parallax="60" className={`image image-two-4`} src={one4} />
+        <img data-parallax="40" className={`image image-two-5`} src={one5} />
+        <img data-parallax="20" className={`image image-two-6`} src={one6} />
+        <img data-parallax="5" className={`image image-two-7`} src={one7} />
+        <img data-parallax="3" className={`image image-two-8`} src={one8} />
+        <img data-parallax="1" className={`image image-two-9`} src={one9} />
         <img className={`image image-two-10`} src={one10} />;
       </section>
       <section className="special special-two">
